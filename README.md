@@ -196,8 +196,8 @@ Both notebooks use the exact same DeepLense dataset provided by the organisers.
 
 | Notebook | Google Drive ID |
 |----------|----------------|
-| `Common_Test.ipynb` | `149sa4C5jXNARESpsgm3HWXfNxuUS_kAy` (Official) |
-| `Quantum_ML.ipynb` | `1ZEyNMEO43u3qhJAwJeBZxFBEYc_pVYZQ` (Mirrored) |
+| `Common_Test.ipynb` | `149sa4C5jXNARESpsgm3HWXfNxuUS_kAy` (Mirrored) |
+| `Quantum_ML.ipynb` | `1ZEyNMEO43u3qhJAwJeBZxFBEYc_pVYZQ` (Official) |
 
 
 ---
