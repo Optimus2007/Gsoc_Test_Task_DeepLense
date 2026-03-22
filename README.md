@@ -33,8 +33,8 @@ Classifying these three dark matter substructure regimes from telescope images i
 ## Repository Structure
 
 ```
-├── Common_Test2.ipynb      # Common Task  — classical transfer learning (3 CNN architectures)
-├── Quantum_ML3.ipynb       # Specific Task — quantum ML (6 experiments)
+├── Common_Test.ipynb      # Common Task  — classical transfer learning (3 CNN architectures)
+├── Quantum_ML.ipynb       # Specific Task — quantum ML (6 experiments)
 └── README.md
 ```
 
@@ -42,7 +42,7 @@ Classifying these three dark matter substructure regimes from telescope images i
 
 ## Notebook 1 — Common Task: Classical Transfer Learning
 
-**`Common_Test2.ipynb`** · Full dataset: 30,000 train / 7,500 val images
+**`Common_Test.ipynb`** · Full dataset: 30,000 train / 7,500 val images
 
 ### Models
 
@@ -108,7 +108,7 @@ ResNet-50 matches very closely (0.9939 vs 0.9943) despite having ~2× more param
 
 ## Notebook 2 — Specific Task: Quantum Machine Learning
 
-**`Quantum_ML3.ipynb`** · Subsampled dataset: 1,500 train / 300 val (500 per class)
+**`Quantum_ML.ipynb`** · Subsampled dataset: 1,500 train / 300 val (500 per class)
 
 Six quantum ML experiments tracing a clear progression from a naive VQC baseline — which fails due to barren plateaus — to a working hybrid architecture. Every design decision is grounded in published quantum ML theory.
 
@@ -184,7 +184,7 @@ A random 3-class classifier achieves AUC = 0.50. The progression from 0.53 (Exp 
 # Both notebooks
 pip install torch torchvision scikit-learn matplotlib seaborn tqdm gdown pillow
 
-# Quantum_ML3.ipynb additionally
+# Quantum_ML.ipynb additionally
 pip install pennylane pennylane-lightning
 ```
 
@@ -194,8 +194,8 @@ Both notebooks download their datasets automatically via `gdown` when run on Col
 
 | Notebook | Google Drive ID |
 |----------|----------------|
-| `Common_Test2.ipynb` | `149sa4C5jXNARESpsgm3HWXfNxuUS_kAy` |
-| `Quantum_ML3.ipynb` | `1ZEyNMEO43u3qhJAwJeBZxFBEYc_pVYZQ` |
+| `Common_Test.ipynb` | `149sa4C5jXNARESpsgm3HWXfNxuUS_kAy` |
+| `Quantum_ML.ipynb` | `1ZEyNMEO43u3qhJAwJeBZxFBEYc_pVYZQ` |
 
 ### Running
 
@@ -208,14 +208,14 @@ Both notebooks download their datasets automatically via `gdown` when run on Col
 
 | Notebook | Estimated Time | Notes |
 |----------|----------------|-------|
-| `Common_Test2.ipynb` | ~45–60 min | 3 models × 30 epochs × 30,000 images |
-| `Quantum_ML3.ipynb` | ~60–90 min | 6 experiments × 30 epochs × 1,500 images on quantum simulator |
+| `Common_Test.ipynb` | ~45–60 min | 3 models × 30 epochs × 30,000 images |
+| `Quantum_ML.ipynb` | ~60–90 min | 6 experiments × 30 epochs × 1,500 images on quantum simulator |
 
 ---
 
 ## References
 
-### Quantum ML — directly applied in Quantum_ML3.ipynb
+### Quantum ML — directly applied in Quantum_ML.ipynb
 
 | Paper | Where Applied |
 |-------|--------------|
@@ -236,7 +236,7 @@ Both notebooks download their datasets automatically via `gdown` when run on Col
 | Schatzki, L. et al. (2024). *Theoretical guarantees for permutation-equivariant quantum neural networks.* **PRX Quantum.** [doi:10.1103/PRXQuantum.5.020328](https://doi.org/10.1103/PRXQuantum.5.020328) | Equivariant QNN exploiting SO(2) symmetry of lensing images |
 | Cong, I. et al. (2019). *Quantum convolutional neural networks.* **Nature Physics.** [doi:10.1038/s41567-019-0648-8](https://doi.org/10.1038/s41567-019-0648-8) | QCNN hierarchical image processing without PCA |
 
-### Classical deep learning — applied in Common_Test2.ipynb
+### Classical deep learning — applied in Common_Test.ipynb
 
 | Paper | Architecture |
 |-------|-------------|
