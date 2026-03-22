@@ -190,11 +190,13 @@ pip install pennylane pennylane-lightning
 
 ### Dataset
 
-Both notebooks download their datasets automatically via `gdown` when run on Colab.
+Both notebooks download the dataset automatically via `gdown` when run on Colab. 
 
-| Notebook | Google Drive ID |
-|----------|----------------|
-| `Common_Test.ipynb` | `149sa4C5jXNARESpsgm3HWXfNxuUS_kAy` |
+> **Note:** The official dataset drive links provided by the organisers frequently hit Google Drive's bandwidth download limits due to their large size. To ensure these evaluation notebooks are **100% reliably reproducible** for reviewers without failing on Colab, I have mirrored the exact original DeepLense datasets onto my personal Google Drive. Both notebooks are configured to download directly from these reliable mirror links.
+
+| Notebook | Mirrored Google Drive ID |
+|----------|-------------------------|
+| `Common_Test.ipynb` | `1ZEyNMEO43u3qhJAwJeBZxFBEYc_pVYZQ` |
 | `Quantum_ML.ipynb` | `1ZEyNMEO43u3qhJAwJeBZxFBEYc_pVYZQ` |
 
 ### Running
