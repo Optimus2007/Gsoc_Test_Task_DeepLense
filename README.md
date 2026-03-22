@@ -7,7 +7,7 @@
 | **Author** | Aditya Raj |
 | **GitHub** | [github.com/Optimus2007](https://github.com/Optimus2007) |
 | **LinkedIn** | [linkedin.com/in/aditya-raj-3605b233a](https://linkedin.com/in/aditya-raj-3605b233a/) |
-| **Project** | Hybrid Quantum-Classical Representation Learning for Dark Matter Substructure |
+| **Project** | Hybrid Quantum-Classical Representation Learning for Dark Matter Substructure Classification |
 | **Programme** | Google Summer of Code 2026 · ML4SCI · DeepLense |
 
 ---
