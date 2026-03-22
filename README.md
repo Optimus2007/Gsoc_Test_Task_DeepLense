@@ -199,19 +199,6 @@ Both notebooks download the dataset automatically via `gdown` when run on Colab.
 | `Common_Test.ipynb` | `1ZEyNMEO43u3qhJAwJeBZxFBEYc_pVYZQ` |
 | `Quantum_ML.ipynb` | `1ZEyNMEO43u3qhJAwJeBZxFBEYc_pVYZQ` |
 
-### Running
-
-1. Open in Google Colab → Runtime → Change runtime type → **GPU (T4 recommended)**
-2. Run all cells top to bottom
-3. Dataset downloads automatically — no manual steps needed
-4. Outputs saved to `outputs/` (classical) or `q_outputs/` (quantum)
-
-### Estimated Runtimes on Colab T4
-
-| Notebook | Estimated Time | Notes |
-|----------|----------------|-------|
-| `Common_Test.ipynb` | ~45–60 min | 3 models × 30 epochs × 30,000 images |
-| `Quantum_ML.ipynb` | ~60–90 min | 6 experiments × 30 epochs × 1,500 images on quantum simulator |
 
 ---
 
