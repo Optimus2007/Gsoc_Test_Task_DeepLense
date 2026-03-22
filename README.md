@@ -192,12 +192,12 @@ pip install pennylane pennylane-lightning
 
 Both notebooks use the exact same DeepLense dataset provided by the organisers.
 
-> **Note:** To bypass bandwidth download limits on Colab, I downloaded the original dataset and mirrored it to my personal Google Drive. The `Common_Test.ipynb` notebook uses the official DeepLense link, while the computationally heavier `Quantum_ML.ipynb` notebook uses my reliable personal mirror link to ensure 100% reproducibility.
+> **Note:** To bypass bandwidth download limits on Colab, I downloaded the original dataset and mirrored it to my personal Google Drive. The `Common_Test.ipynb` notebook uses my reliable personal mirror link to ensure 100% reproducibility on the full 30K dataset, while the `Quantum_ML.ipynb` notebook uses the official DeepLense link.
 
 | Notebook | Google Drive ID |
 |----------|----------------|
-| `Common_Test.ipynb` | `149sa4C5jXNARESpsgm3HWXfNxuUS_kAy` (Official) |
-| `Quantum_ML.ipynb` | `1ZEyNMEO43u3qhJAwJeBZxFBEYc_pVYZQ` (Mirrored) |
+| `Common_Test.ipynb` | `1ZEyNMEO43u3qhJAwJeBZxFBEYc_pVYZQ` (Mirrored) |
+| `Quantum_ML.ipynb` | `149sa4C5jXNARESpsgm3HWXfNxuUS_kAy` (Official) |
 
 
 ---
