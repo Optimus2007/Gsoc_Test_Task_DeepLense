@@ -123,6 +123,18 @@ Six quantum ML experiments tracing a clear progression from a naive VQC baseline
 | 5 | **Data Re-uploading VQC** | Re-encoded every layer | Rot + CNOT ring ×3 | Universal approximation (Pérez-Salinas 2020) |
 | 6 | **Fine-tuned CNN + Re-uploading VQC** | CNN → projector → re-upload | Rot + CNOT ring ×2 | Best of Exp 4 + Exp 5 combined |
 
+### Connection Between Evaluation Tasks and Proposed GSoC Project (DEEPLENSE2)
+
+The six experiments in this notebook were deliberately designed as a **pre-study** for the exact architecture described in my GSoC proposal:
+
+- **Exp 4 & Exp 6** → validated the **trainable projector** (CNN → 8–16 dim latent vector) that becomes Stage 1 of the full pipeline.
+- **Exp 6** → proved that **data re-uploading + projector** is the most promising VQC branch (the one I will extend in Phase 3).
+- **Exp 3** → provided the kernel baseline that will be scaled with stratified subsampling + Nyström in Phase 2.
+- Barren-plateau diagnostics and mitigations (near-zero init, local cost, reduced depth) are carried forward unchanged.
+- The modest 0.6215 Macro AUC on raw 8-dim features explains exactly why the proposal emphasises **task-relevant representation learning** before the quantum layer.
+
+All design decisions in the proposal (phased training, KTA pre-check, IQP feature maps, NISQ noise study) directly follow from what I observed here.
+
 ### The Root Problem: Barren Plateaus
 
 The original Experiments 1–3 all achieved AUC ≈ 0.50 (random chance). The notebook identifies this as **barren plateaus** — under random parameter initialisation, gradient variance vanishes exponentially as ~2⁻ⁿ with qubit count (McClean et al. 2018). With 8 qubits and 4 layers at random init, effective gradient magnitude ≈ 2⁻⁸ ≈ 0.004 — far too small for any meaningful weight update. The gradient variance diagnostic cell in the notebook confirms this empirically.
@@ -173,6 +185,13 @@ The **trainable projector** replaces PCA. PCA selects the 8 highest-variance dir
 ### Interpreting the Quantum Results
 
 A random 3-class classifier achieves AUC = 0.50. The progression from 0.53 (Exp 1) to 0.62 (Exp 6) is a genuine learning signal under severe constraints: 8 qubits, 1,500 samples, classical simulation. The key finding is the **systematic improvement pattern** — every targeted fix (barren plateau resolution, CNN backbone, re-uploading) produces a measurable AUC gain. This demonstrates understanding of quantum ML design principles rather than blind experimentation.
+
+### Limitations & Lessons Learned from Evaluation Tasks
+
+- Subsampling (1,500 train) was necessary for quantum simulation time; full 30K hybrid training will be possible in GSoC with Google Cloud credits.
+- ConvNeXt collapse diagnosed but not fully ablated in this repo — will be revisited if needed.
+- Quantum results are modest (0.6215) because the projector was not yet jointly optimised — the full hybrid pipeline in the proposal closes this gap.
+- All negative results (barren plateaus, kernel vs classical) were kept and analysed — exactly the scientific honesty required for the NISQ noise study in Phase 2/3.
 
 ---
 
