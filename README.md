@@ -209,7 +209,6 @@ Both notebooks use the exact same DeepLense dataset provided by the organisers.
 |----------|----------------|
 | `Common_Test.ipynb` | `1ZEyNMEO43u3qhJAwJeBZxFBEYc_pVYZQ` (Official) |
 | `Quantum_ML.ipynb` | `149sa4C5jXNARESpsgm3HWXfNxuUS_kAy` (Mirrored) |
-| `Quantum_ML.ipynb` | `1ZEyNMEO43u3qhJAwJeBZxFBEYc_pVYZQ` (Official) |
 
 
 ---
